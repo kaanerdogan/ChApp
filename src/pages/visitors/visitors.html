@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Ziyaretçiler</ion-title>
+    <div padding>
+      <ion-segment [(ngModel)]="visitors">
+        <ion-segment-button value="onvis">
+          Online Visitors
+        </ion-segment-button>
+        <ion-segment-button value="history">
+          History
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div [ngSwitch]="visitors">
+
+    <ion-list *ngSwitchCase="'onvis'">
+      <ion-item>
+        <h2>Visitor 1</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Visitor 2</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Visitor 3</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'history'">
+      <ion-item>
+        <h2>Visitor 4</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Visitor 5</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Visitor 6</h2>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

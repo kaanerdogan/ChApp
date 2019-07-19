@@ -1,0 +1,22 @@
+<ion-content padding>
+  <h1 style="text-align: center;">Login</h1>
+  <div class="loginForm">
+    <ion-list>
+
+      <ion-item class="loginInput">
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="uname"></ion-input>
+      </ion-item>
+
+      <ion-item class="loginInput">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+
+      <button ion-button full class="btn" (click)="loginForm(uname)">{{buttonText}}</button>
+
+    </ion-list>
+
+  </div>
+
+</ion-content>

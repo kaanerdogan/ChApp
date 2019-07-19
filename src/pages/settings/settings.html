@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Settings</ion-title>
+    <div padding>
+      <ion-segment [(ngModel)]="settings">
+        <ion-segment-button value="user">
+          User Settings
+        </ion-segment-button>
+        <ion-segment-button value="general">
+          General
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="settings">
+    <ion-list *ngSwitchCase="'user'">
+      <ion-item>
+        <h2>Setting 1</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Setting 2</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Setting 3</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'general'">
+      <ion-item>
+        <h2>Setting 4</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Setting 5</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Setting 6</h2>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

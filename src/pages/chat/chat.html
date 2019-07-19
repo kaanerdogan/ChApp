@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Chat With {{name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #488aff">
+  
+  <ion-list no-lines class="msgbubble">
+    <div class="innermsg left">
+      {{ msg }}
+    </div>
+    <div class="innermsg right">
+      How can i help you?
+    </div>
+  </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-list>
+  <ion-item class="textbox">
+    <ion-input type="text" placeholder="Mesajınızı Girin" class="textarea"></ion-input>
+    <button ion-button icon-only item-right round><ion-icon name="send"></ion-icon></button>
+  </ion-item>
+
+  </ion-list>
+</ion-footer>

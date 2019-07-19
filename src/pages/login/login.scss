@@ -1,0 +1,49 @@
+page-login {
+  ion-content {
+    background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .loginForm {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .loginInput {
+    background-image: linear-gradient(120deg, #2196F3, #673AB7);
+  }
+
+
+  ion-item ion-label {
+    color: #f1f1f1 !important;
+  }
+
+  .btn{
+
+    background-size: 200% !important;
+    border-radius: 6px !important;
+    border: none !important;
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4) !important;
+  }
+  .btn:focus-within{
+    animation: animate 1s linear 3 !important;
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0px;
+    }
+    50% {
+      background-position: right;
+    }
+  }
+}

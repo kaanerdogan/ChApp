@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Chat List</ion-title>
+    <div padding>
+      <ion-segment [(ngModel)]="chats">
+        <ion-segment-button value="ongoing">
+          Ongoing Chats
+        </ion-segment-button>
+        <ion-segment-button value="history">
+          History
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="chats">
+
+    <ion-list *ngSwitchCase="'ongoing'">
+      <ion-item *ngFor="let chat of chatList;" (click)="chatSelect($event, chat)">
+        <div item-start>
+          <h2>{{chat.name}}</h2>
+          <small class="link">{{chat.link}}</small>
+        </div>
+        <small item-end>{{chat.from}}</small>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'history'">
+      <ion-item>
+        <h2>Chat 4</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Chat 5</h2>
+      </ion-item>
+      <ion-item>
+        <h2>Chat 6</h2>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

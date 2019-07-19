@@ -8,15 +8,15 @@ page-chat {
     padding: 5px 10px !important;
     margin: 5px !important;
     font-weight: 500 !important;
-    font-size: 18px !important;
+    font-size: 15px !important;
     border-radius: 15px !important;
   }
 
   .left {
     float: left !important;
-    background-color: #FFFFFF !important;
-    color: #262626 !important;
-    margin-left: 20px !important;
+    background-color: #488aff !important;
+    color: #FFFFFF !important;
+    margin-left: 10px !important;
   }
   .left:after{
     content: '' !important;
@@ -26,9 +26,9 @@ page-chat {
     top: 1px !important;
     width: 0 !important;
     height: 0 !important;
-    border-top: 8px solid transparent !important;
-    border-bottom: 8px solid transparent !important;
-    border-right: 25px solid #fff !important;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid transparent !important;
+    border-right: 25px solid #488aff !important;
   }
 
 
@@ -36,7 +36,7 @@ page-chat {
     float: right !important;
     background-color: #c9f7a3 !important;
     color: #262626 !important;
-    margin-right: 20px !important;
+    margin-right: 10px !important;
   }
   .right:after{
     content: '' !important;
@@ -66,7 +66,7 @@ page-chat {
     bottom: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    min-height: 62px !important;
+    height: 45px !important;
   }
   .textarea{
     box-sizing: border-box;
@@ -81,10 +81,11 @@ page-chat {
 
 
   button {
-    height: 40px !important;
+    height: 30px !important;
     font-size: 1.9rem !important;
   }
   .button[icon-only] {
-    min-width: 2.45em !important;
+    width: 2.2em !important;
+    padding: 0 1px 0 7px !important;
   }
 }

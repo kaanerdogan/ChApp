@@ -1,29 +1,42 @@
 <ion-header>
   <ion-navbar>
-    <ion-title text-center>Chat With {{name}}</ion-title>
+    <ion-title text-center>Chat With <!-- {{name}}--></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  
-  <ion-list no-lines class="msgbubble">
-    <div class="innermsg left">
-      {{ msg }}
-    </div>
-    <div class="innermsg right">
-      How can i help you?
-    </div>
-  </ion-list>
-
-
+<div scroll-glue>
+    <ion-list no-lines class="msgbubble">
+      <div class="innermsg left" *ngFor="let comingmsg of CM">
+        {{ comingmsg }}
+      </div>
+      <div class="innermsg right" *ngFor="let goingmsg of GM">
+        {{ goingmsg }}
+      </div>
+    </ion-list>
+</div>
+  <!--TODO: Left mesaj ekleyip mesajların sol sağ durumlarını kontrol et.-->
 </ion-content>
 
 <ion-footer>
   <ion-list>
-  <ion-item class="textbox">
-    <ion-input type="text" placeholder="Mesajınızı Girin" class="textarea"></ion-input>
-    <button ion-button icon-only item-right round><ion-icon name="send"></ion-icon></button>
-  </ion-item>
+    <ion-item class="textbox">
+      <ion-input type="text" placeholder="Mesajınızı Girin" class="textarea" [(ngModel)]="msgInput"></ion-input>
+      <button ion-button icon-only item-right round (click)="sendMsg(msgInput)">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-item>
 
   </ion-list>
 </ion-footer>
+<!--<ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">-->
+<!--  <div class="input-wrap">-->
+<!--    <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">-->
+<!--      <ion-icon name="attach"></ion-icon>-->
+<!--    </button>-->
+<!--    <ion-input #chat_input placeholder="Mesajınız" [(ngModel)]="message" (keyup.enter)=sendMessage()></ion-input>-->
+<!--    <button ion-button clear icon-only item-right (click)="sendMessage()">-->
+<!--      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>-->
+<!--    </button>-->
+<!--  </div>-->
+<!--</ion-footer>-->

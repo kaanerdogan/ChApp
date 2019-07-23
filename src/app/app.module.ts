@@ -25,7 +25,10 @@ import {VisitorsPage} from "../pages/visitors/visitors";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, [
+      {tabsHideOnSubPages: "true"},
+      'luegg.directives'
+      ])
   ],
   bootstrap: [IonicApp],
   entryComponents: [

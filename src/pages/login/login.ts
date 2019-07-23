@@ -10,8 +10,9 @@ import {TabsPage} from "../tabs/tabs";
 export class LoginPage {
   uname: any = "";
   pass: any;
-  buttonText: string = 'LOGIN';
-  buttonText2: string = 'CHECKING';
+  buttonText: any = 'LOGIN';
+  buttonText2: any = 'CHECKING';
+  loginClicked: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,8 +23,9 @@ export class LoginPage {
 
   loginForm(uname) {
     this.buttonText = this.buttonText2;
+    this.loginClicked = !this.loginClicked;
     setTimeout(() => {
-      this.navCtrl.setRoot(TabsPage);
+      this.navCtrl.setRoot(TabsPage, {uname: uname});
     }, 2500)
     console.log(uname + " Olarak giriş yapıldı");
   }

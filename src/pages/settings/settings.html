@@ -17,8 +17,8 @@
 <ion-content padding>
   <div [ngSwitch]="settings">
     <ion-list *ngSwitchCase="'user'">
-      <ion-item>
-        <h2>Setting 1</h2>
+      <ion-item (click)="logout()">
+        <h2>Logout</h2>
       </ion-item>
       <ion-item>
         <h2>Setting 2</h2>
